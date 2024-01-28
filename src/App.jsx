@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      {false && <BreadCrumps />}
+      {true && <BreadCrumps />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/modellari" element={<Home />} />

@@ -11,7 +11,7 @@ const BreadCrumps = () => {
 
   return (
     <div className="max-w-[1280px] mx-auto px-3">
-      <div className="bradCrumps flex gap-1">
+      <div className="bradCrumps flex gap-1 sm:text-md max-sm:text-[14px]">
         <Link to={'/modellari'} className="after:content-['>']">Bosh sahifa </Link>
         {crumps.map(crump => {
           currentLocation.push(`/${crump}`)

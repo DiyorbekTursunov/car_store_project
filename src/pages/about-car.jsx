@@ -66,10 +66,10 @@ const AboutCar = () => {
     ]
     return (
         <div className='max-w-[1280px] mx-auto py-6 px-3'>
-            <h1 className="text-5xl font-semibold mb-16">Mashina haqida</h1>
+            <h1 className="md:text-5xl sm:text-3xl max-sm:text-xl font-semibold mb-16">Mashina haqida</h1>
 
-            <div className="flex justify-between items-start gap-8">
-                <div className="w-[396px] bg-[#F6F6F6] rounded-lg px-6 py-4">
+            <div className="flex md:flex-row sm:flex-col max-sm:flex-col  justify-between items-start gap-8">
+                <div className="md:w-[396px] sm:w-full bg-[#F6F6F6] rounded-lg px-6 py-4">
                     <h2 className="uppercase text-xl font-medium mb-2">{location.pathname.split('/')[2]} {params.slug}</h2>
                     <p className="mb-4">329 900 000 so‘m dan</p>
                     <img src={malibu_car} alt="car img" className="mb-4" />

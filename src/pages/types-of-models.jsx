@@ -44,12 +44,12 @@ const Types_of_models = () => {
 
     return (
         <div className='max-w-[1280px] mx-auto py-6 px-3 mt-6'>
-            <div className='grid grid-cols-4 gap-5 justify-between mt-12'>
+            <div className='grid md:grid-cols-4 sm:grid-cols-2 max-sm:flex max-sm:flex-col max-sm:items-center gap-5 justify-between mt-12'>
                 {types_of_models.map(model => (
-                    <div className='cursor-pointer' key={model.id} onClick={() => navigate_to(model.name)} >
+                    <div className='cursor-pointer max-sm:text-center' key={model.id} onClick={() => navigate_to(model.name)} >
                         <img src={model.img} alt="car image" />
-                        <h1 className='text-2xl font-medium mb-1'>{params.slug.toUpperCase()} {model.name.toUpperCase()}</h1>
-                        <h1 className='text-2xl font-medium'>Narxi: {model.price}</h1>
+                        <h1 className=' md:text-2xl sm:text-xl font-medium mb-1'>{params.slug.toUpperCase()} {model.name.toUpperCase()}</h1>
+                        <h1 className='sl:text-2xl sm:text-1xl font-medium '>Narxi: {model.price}</h1>
                     </div>
                 ))}
             </div>

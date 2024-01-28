@@ -22,7 +22,7 @@ const Navbar = () => {
     return (
         <div className='max-w-[1280px] mx-auto py-6 px-3'>
             <div className={`flex items-center ${isAmin ? "justify-between" : "justify-end"}`}>
-                <button className='rounded-xl bg-[#2A85FF] flex items-center gap-2 px-5 py-3 text-[#fff]' onClick={() => navigate_to(isAmin)}>
+                <button className='rounded-xl bg-[#2A85FF] flex items-center gap-2 px-5 py-3 max-sm:px-3 text-[#fff]' onClick={() => navigate_to(isAmin)}>
                     {/* user icon */}
                     <img src={user_icon} alt="user icon" />
                     {isAmin ? "Asosiyga qaytish" : "Admin o‘tish"}

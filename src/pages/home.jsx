@@ -36,12 +36,12 @@ const Home = () => {
 
   return (
     <div className='max-w-[1280px] mx-auto py-6 px-3 mt-6'>
-      <h1 className="text-5xl font-semibold">Modellari</h1>
-      <div className='grid grid-cols-4 gap-5 justify-between mt-12'>
+      <h1 className="md:text-5xl sm:text-2xl max-sm:text-xl font-semibold">Modellari</h1>
+      <div className='grid md:grid-cols-4 sm:grid-cols-2 max-sm:flex max-sm:flex-col max-sm:items-center gap-5 justify-between mt-12'>
         {models.map(model => (
           <div className='cursor-pointer' key={model.id} onClick={() => navigate_to(model.modelName)}>
             <img src={model.img} alt="models image" />
-            <h3 className='text-4xl font-medium text-center'>{model.modelName}</h3>
+            <h3 className='xl:text-4xl md:text-3xl sm:text-2xl max-sm:text-xl  font-medium text-center'>{model.modelName}</h3>
           </div>
         ))}
       </div>

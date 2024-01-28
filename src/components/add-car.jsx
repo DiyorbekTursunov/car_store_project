@@ -21,9 +21,9 @@ const AddCar = ({ setaddCarIsOpen }) => {
     }
 
     return (
-        <div>
-            <div className='absolute w-full h-screen bg-[#F4F4F4] opacity-70 top-0 z-40' ></div>
-            <div className='absolute w-full h-screen flex justify-center items-center top-0 z-50'>
+        <>
+            <div className='absolute w-full h-full bg-[#F4F4F4] opacity-70 top-0 z-40' ></div>
+            <div className='absolute w-full md:h-full  flex justify-center items-center top-0 z-50'>
                 <div className='w-[1164px] bg-[#FCFCFC] rounded-2xl py-8 px-6 shadow-2xl'>
                     <div className='flex justify-between items-center mb-6'>
                         <div className='flex items-center gap-4'>
@@ -36,13 +36,13 @@ const AddCar = ({ setaddCarIsOpen }) => {
                     </div>
                     <form className='flex flex-col items-end'>
                         <div className='w-full'>
-                            <div className='flex w-full justify-between mb-4'>
-                                <label htmlFor="model" className='flex flex-col gap-2 relative'>
+                            <div className='flex sm:flex-row max-sm:flex-col gap-6 justify-between mb-4'>
+                                <label htmlFor="model" className='flex sm:w-1/2 max-sm:w-full flex-col gap-2 relative'>
                                     Markasi
                                     <button
                                         id="dropdownDefaultButton"
                                         data-dropdown-toggle="dropdown"
-                                        className="w-[536px] py-3 px-3 bg-[#F4F4F4] rounded-md  focus:ring-4  font-medium text-sm  py text-center inline-flex items-center justify-between"
+                                        className="w-full py-3 px-3 bg-[#F4F4F4] rounded-md  focus:ring-4  font-medium text-sm  py text-center inline-flex items-center justify-between"
                                         type="button"
                                         onClick={() => setMarkasiDropDown(!MarkasiDropDown)}
                                     >
@@ -64,7 +64,7 @@ const AddCar = ({ setaddCarIsOpen }) => {
                                         </svg>
                                     </button>
                                     {/* Dropdown menu */}
-                                    {MarkasiDropDown ? <div id="dropdown" className=" absolute top-20 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
+                                    {MarkasiDropDown ? <div id="dropdown" className=" absolute top-20 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 z-50">
                                         <ul
                                             className="py-2 text-sm bg-[#b8b8b8]"
                                             aria-labelledby="dropdownDefaultButton"
@@ -109,12 +109,12 @@ const AddCar = ({ setaddCarIsOpen }) => {
                                     </div> : null}
                                 </label>
 
-                                <label htmlFor="Tanirovkasi" className='flex flex-col gap-2 relative'>
+                                <label htmlFor="Tanirovkasi" className='flex sm:w-1/2 max-sm:w-full flex-col gap-2 relative'>
                                     Tanirovkasi
                                     <button
                                         id="dropdownDefaultButton"
                                         data-dropdown-toggle="dropdown"
-                                        className="w-[536px] py-3 px-3 bg-[#F4F4F4] rounded-md  focus:ring-4  font-medium text-sm  py text-center inline-flex items-center justify-between"
+                                        className="w-full py-3 px-3 bg-[#F4F4F4] rounded-md  focus:ring-4  font-medium text-sm  py text-center inline-flex items-center justify-between"
                                         type="button"
                                         onClick={() => setTanirovkasiDropDown(!TanirovkasiDropDown)}
                                     >
@@ -136,7 +136,7 @@ const AddCar = ({ setaddCarIsOpen }) => {
                                         </svg>
                                     </button>
                                     {/* Dropdown menu */}
-                                    {TanirovkasiDropDown ? <div id="dropdown" className=" absolute top-20 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
+                                    {TanirovkasiDropDown ? <div id="dropdown" className=" absolute top-20 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 z-40">
                                         <ul
                                             className="py-2 text-sm bg-[#b8b8b8]"
                                             aria-labelledby="dropdownDefaultButton"
@@ -163,56 +163,56 @@ const AddCar = ({ setaddCarIsOpen }) => {
                                     </div> : null}
                                 </label>
                             </div>
-                            <div className='flex w-full justify-between mb-4'>
-                                <label htmlFor="Motor" className='flex flex-col gap-2'>
+                            <div className='flex sm:flex-row max-sm:flex-col gap-6  justify-between mb-4'>
+                                <label htmlFor="Motor" className='flex sm:w-1/2 max-sm:w-full flex-col gap-2'>
                                     Motor
-                                    <input type="number" name="" id="Motor" placeholder='Kiriting' required className='w-[536px] py-3 pl-3 bg-[#F4F4F4] rounded-md' />
+                                    <input type="number" name="" id="Motor" placeholder='Kiriting' required className=' w-full py-3 pl-3 bg-[#F4F4F4] rounded-md' />
                                 </label>
-                                <label htmlFor="Motor" className='flex flex-col gap-2'>
+                                <label htmlFor="Motor" className='flex sm:w-1/2 max-sm:w-full flex-col gap-2'>
                                     Motor
-                                    <input type="number" name="" id="Motor" placeholder='Kiriting' required className='w-[536px] py-3 pl-3 bg-[#F4F4F4] rounded-md' />
+                                    <input type="number" name="" id="Motor" placeholder='Kiriting' required className='w-full py-3 pl-3 bg-[#F4F4F4] rounded-md' />
                                 </label>
                             </div>
 
-                            <div className='flex w-full justify-between mb-4'>
-                                <label htmlFor="Color" className='flex flex-col gap-2'>
+                            <div className='flex sm:flex-row max-sm:flex-col  gap-6 justify-between mb-4'>
+                                <label htmlFor="Color" className='flex sm:w-1/2 max-sm:w-full flex-col gap-2'>
                                     Color
-                                    <input type="text" name="" id="Color" placeholder='Kiriting' required className='w-[536px] py-3 pl-3 bg-[#F4F4F4] rounded-md' />
+                                    <input type="text" name="" id="Color" placeholder='Kiriting' required className='w-full py-3 pl-3 bg-[#F4F4F4] rounded-md' />
                                 </label>
-                                <label htmlFor="Distance" className='flex flex-col gap-2'>
+                                <label htmlFor="Distance" className='flex sm:w-1/2 max-sm:w-full flex-col gap-2'>
                                     Distance
-                                    <input type="text" name="" id="Distance" placeholder='Kiriting' required className='w-[536px] py-3 pl-3 bg-[#F4F4F4] rounded-md' />
+                                    <input type="text" name="" id="Distance" placeholder='Kiriting' required className='w-full py-3 pl-3 bg-[#F4F4F4] rounded-md' />
                                 </label>
                             </div>
 
-                            <div className='flex w-full justify-between mb-4'>
-                                <label htmlFor="Rasm 360 ichki tomon" className='flex flex-col gap-2'>
+                            <div className='flex  sm:flex-row max-sm:flex-col gap-6 justify-between mb-4'>
+                                <label htmlFor="Rasm 360 ichki tomon" className='flex sm:w-1/2 max-sm:w-full flex-col gap-2'>
                                     Rasm 360 ichki tomon
                                     <input type="file" name="" id="Rasm 360 ichki tomon" placeholder='Kiriting' accept='image/*' required />
-                                    <div className='w-[536px] py-3 pl-3 bg-[#F4F4F4] rounded-md cursor-pointer flex gap-3' >
+                                    <div className='w-full py-3 pl-3 bg-[#F4F4F4] rounded-md cursor-pointer flex gap-3' >
                                         <img src={photo_icon} alt="photo icon" />
                                         <span className='text-[#9A9FA5]'>Yuklash</span>
                                     </div>
                                 </label>
-                                <label htmlFor="Rasm 360 tashqi tomon" className='flex flex-col gap-2'>
+                                <label htmlFor="Rasm 360 tashqi tomon" className='flex sm:w-1/2 max-sm:w-full flex-col gap-2'>
                                     Rasm 360 tashqi tomon
                                     <input type="file" name="" id="Rasm 360 tashqi tomon" placeholder='Kiriting' accept='image/*' required />
-                                    <div className='w-[536px] py-3 pl-3 bg-[#F4F4F4] rounded-md cursor-pointer flex gap-3' >
+                                    <div className='w-full py-3 pl-3 bg-[#F4F4F4] rounded-md cursor-pointer flex gap-3' >
                                         <img src={photo_icon} alt="photo icon" />
                                         <span className='text-[#9A9FA5]'>Yuklash</span>
                                     </div>
                                 </label>
                             </div>
 
-                            <div className='flex w-full justify-between mb-4'>
-                                <label htmlFor="model" className='flex flex-col gap-2'>
+                            <div className='flex  sm:flex-row max-sm:flex-col gap-6 justify-between mb-4'>
+                                <label htmlFor="model" className='flex sm:w-1/2 max-sm:w-full flex-col gap-2'>
                                     Deseription
-                                    <textarea name="" id="model" placeholder='Kiriting' required className='w-[536px] h-[200px] py-3 pl-3 bg-[#F4F4F4] rounded-md' />
+                                    <textarea name="" id="model" placeholder='Kiriting' required className='w-full h-[200px] py-3 pl-3 bg-[#F4F4F4] rounded-md' />
                                 </label>
-                                <label htmlFor="Modeli turi uchun rasm" className='flex flex-col gap-2'>
+                                <label htmlFor="Modeli turi uchun rasm" className='flex sm:w-1/2 max-sm:w-full flex-col gap-2'>
                                     Modeli turi uchun rasm
                                     <input type="file" name="" id="Modeli turi uchun rasm" placeholder='Kiriting' accept='image/*' required />
-                                    <div className='w-[536px] py-3 pl-3 bg-[#F4F4F4] rounded-md cursor-pointer flex gap-3' >
+                                    <div className='w-full py-3 pl-3 bg-[#F4F4F4] rounded-md cursor-pointer flex gap-3' >
                                         <img src={photo_icon} alt="photo icon" />
                                         <span className='text-[#9A9FA5]'>Yuklash</span>
                                     </div>
@@ -224,7 +224,7 @@ const AddCar = ({ setaddCarIsOpen }) => {
                     </form>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
