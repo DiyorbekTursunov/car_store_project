@@ -4,11 +4,13 @@ import damas_car from '../assets/damas-car.png'
 import nexia_car from '../assets/nexia-car.png'
 import equinox_car from '../assets/equinox-car.png'
 import tahoe_car from '../assets/tahoe-car.png'
+import { useEffect } from 'react'
 
 const Types_of_models = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const params = useParams()
+    const token = localStorage.getItem("token")
 
     const types_of_models = [
         {
@@ -36,7 +38,32 @@ const Types_of_models = () => {
             id: 4,
         },
     ]
+    useEffect(() => {
 
+        if (token) {
+            getCatigory()
+            console.log("true");
+
+        } else {
+            navigate('/register')
+        }
+    }, [])
+
+    async function getCatigory() {
+
+        const headers = {
+            token
+        };
+        try {
+            const data = await axios.get("http://localhost:4001/get_categories", { headers })
+            if (data.status == 200) {
+                // setmodels(data.data)
+            }
+        } catch (error) {
+            navigate('/register')
+            console.log(error);
+        }
+    }
     function navigate_to(path) {
         navigate(`${location.pathname}/${path}`)
     }

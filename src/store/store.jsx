@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import slugSlice from '../slices/slug-slice'
+import loginSlice from '../slices/login'
 
 export const store = configureStore({
   reducer: {
-    slug: slugSlice
+    slug: loginSlice
   },
 })
