@@ -21,11 +21,12 @@ const App = () => {
     } else {
       setcheckParamsIsActive(true)
     }
+      
   }, [location])
   return (
     <>
       <Navbar />
-      {checkParamsIsActive && <BreadCrumps />}
+      {/* {checkParamsIsActive && <BreadCrumps />} */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

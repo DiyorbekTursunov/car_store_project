@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 
 const BreadCrumps = () => {
   const location = useLocation()
-
   const currentLocation = []
 
   const crumps = location.pathname.split('/')
